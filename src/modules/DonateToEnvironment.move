@@ -23,7 +23,7 @@ address 0x040B76e04c4E6c523f8e096781ad7044 {
         public fun init(account:&signer) {
             let addr = Signer::address_of(account);
             assert( addr == initAddress() , 10001);
-            assert( exists<Shared_Cap> ( initAddress() ) , 10002 );
+            assert( !exists<Shared_Cap> ( initAddress() ) , 10002 );
             NFT::register_v2<META>(account,NFT::new_meta(b"donation certificate",b"Thank you for your contribution to the world's environmental protection public welfare activities"));
             let nft_cap    = NFT::remove_mint_capability<META>(account);
             move_to(account, Shared_Cap { cap:nft_cap } );
