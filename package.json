@@ -1,0 +1,32 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-plus": "^2.0.2",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@starcoin/starcoin": "^1.8.0",
+    "@starcoin/starmask-onboarding": "^1.0.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "eth-sig-util": "^2.5.3",
+    "ethereumjs-util": "^5.1.1",
+    "ethers": "^5.0.32",
+    "@starcoin/starmask-onboarding": "^1.0.0",
+    "@ethersproject/bytes": "^5.0.6",
+    "bignumber.js": "^9.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
