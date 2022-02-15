@@ -1,6 +1,7 @@
 <template>
 
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+
 </template>
 
 <script>
@@ -10,7 +11,13 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data(){
+    return {
+      imgSrc:require('../public/bg.png')
+    }
   }
+
 }
 </script>
 
@@ -23,4 +30,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
