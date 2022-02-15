@@ -2,10 +2,10 @@
   <div class="hello">
     <h1>The environment of the earth is deteriorating, please contribute to protecting the earth</h1>
     <el-row>
-      <el-col :span="4">
+      <el-col :span="3">
 
       </el-col>
-      <el-col :span="4">
+      <el-col :span="5">
         <h2>
           A total of {{all}} STC were raised
         </h2>
@@ -23,13 +23,35 @@
 
       </el-col>
       <el-col :span="4">
-        <el-button type="success" round v-if="network_name(network_info) == 'Barnard' " @click="get_account">{{connect_state}}</el-button>
+        <el-button type="success" round v-if="network_name(network_info) == 'Barnard' " size="large" @click="get_account">{{connect_state}}</el-button>
         <el-button type="success" round disabled v-else>Connect</el-button >
       </el-col>
     </el-row>
 
     <p></p>
+    <el-row>
+      <el-col :span="3">
 
+      </el-col>
+      <el-col :span="5">
+        <h2>
+          You can donate STC to help us
+        </h2>
+      </el-col>
+      <el-col :span="4">
+
+
+          <el-input-number v-model="num" :precision="4" :step="0.1" :max="100000000" />
+      </el-col>
+      <el-col :span="4">
+          <el-slider v-model="num" :step="10" show-stops> </el-slider>
+
+
+      </el-col>
+      <el-col :span="4">
+        <el-button @click="send">donate</el-button>
+      </el-col>
+    </el-row>
 
 
 
@@ -43,17 +65,8 @@
 
 
 
-    <div class="slider-demo-block">
 
-      <el-input-number v-model="num" :precision="4" :step="0.1" :max="100000000" />
-      <el-slider v-model="num" :step="10" show-stops> </el-slider>
-    </div>
-    <div>
-      <el-button @click="send">donate</el-button>
-    </div>
-    <div class="background">
-      <img src="" width="100%" height="100%" alt="" />
-    </div>
+
 <!--    <ul v-infinite-scroll="load" class="infinite-list" style="overflow: auto">-->
 <!--      <li v-for="i in count" :key="i" class="infinite-list-item">{{ i }}</li>-->
 <!--    </ul>-->
